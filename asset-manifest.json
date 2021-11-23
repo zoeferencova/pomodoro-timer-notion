@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pomodoro-timer-notion/static/css/main.2c00df39.chunk.css",
-    "main.js": "/pomodoro-timer-notion/static/js/main.5d7f7afd.chunk.js",
-    "main.js.map": "/pomodoro-timer-notion/static/js/main.5d7f7afd.chunk.js.map",
-    "runtime-main.js": "/pomodoro-timer-notion/static/js/runtime-main.04a3d418.js",
-    "runtime-main.js.map": "/pomodoro-timer-notion/static/js/runtime-main.04a3d418.js.map",
-    "static/js/2.0b4eea99.chunk.js": "/pomodoro-timer-notion/static/js/2.0b4eea99.chunk.js",
-    "static/js/2.0b4eea99.chunk.js.map": "/pomodoro-timer-notion/static/js/2.0b4eea99.chunk.js.map",
-    "static/js/3.deda4e8d.chunk.js": "/pomodoro-timer-notion/static/js/3.deda4e8d.chunk.js",
-    "static/js/3.deda4e8d.chunk.js.map": "/pomodoro-timer-notion/static/js/3.deda4e8d.chunk.js.map",
+    "main.css": "/pomodoro-timer-notion/static/css/main.fa732561.chunk.css",
+    "main.js": "/pomodoro-timer-notion/static/js/main.14d94da6.chunk.js",
+    "main.js.map": "/pomodoro-timer-notion/static/js/main.14d94da6.chunk.js.map",
+    "runtime-main.js": "/pomodoro-timer-notion/static/js/runtime-main.07fa03d0.js",
+    "runtime-main.js.map": "/pomodoro-timer-notion/static/js/runtime-main.07fa03d0.js.map",
+    "static/js/2.b068b0b7.chunk.js": "/pomodoro-timer-notion/static/js/2.b068b0b7.chunk.js",
+    "static/js/2.b068b0b7.chunk.js.map": "/pomodoro-timer-notion/static/js/2.b068b0b7.chunk.js.map",
+    "static/js/3.69f2edaa.chunk.js": "/pomodoro-timer-notion/static/js/3.69f2edaa.chunk.js",
+    "static/js/3.69f2edaa.chunk.js.map": "/pomodoro-timer-notion/static/js/3.69f2edaa.chunk.js.map",
     "index.html": "/pomodoro-timer-notion/index.html",
-    "static/css/main.2c00df39.chunk.css.map": "/pomodoro-timer-notion/static/css/main.2c00df39.chunk.css.map",
-    "static/js/2.0b4eea99.chunk.js.LICENSE.txt": "/pomodoro-timer-notion/static/js/2.0b4eea99.chunk.js.LICENSE.txt"
+    "static/css/main.fa732561.chunk.css.map": "/pomodoro-timer-notion/static/css/main.fa732561.chunk.css.map",
+    "static/js/2.b068b0b7.chunk.js.LICENSE.txt": "/pomodoro-timer-notion/static/js/2.b068b0b7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.04a3d418.js",
-    "static/js/2.0b4eea99.chunk.js",
-    "static/css/main.2c00df39.chunk.css",
-    "static/js/main.5d7f7afd.chunk.js"
+    "static/js/runtime-main.07fa03d0.js",
+    "static/js/2.b068b0b7.chunk.js",
+    "static/css/main.fa732561.chunk.css",
+    "static/js/main.14d94da6.chunk.js"
   ]
 }
