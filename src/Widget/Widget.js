@@ -11,7 +11,7 @@ class Widget extends Component {
     this.state = {
       currentTab: {
         tabName: "pomodoro",
-        time: 25
+        time: 1500000
       },
       timerOn: false,
     }
@@ -19,6 +19,10 @@ class Widget extends Component {
 
   startTimer = () => {
     this.setState({ timerOn: true });
+  }
+
+  pauseTimer = currentTime => {
+    this.setState({ timerOn: false, currentTab: { time: currentTime } });
   }
 
   changeTab = (tabName, time) => {

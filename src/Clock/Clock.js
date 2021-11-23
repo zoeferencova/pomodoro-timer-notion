@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import Countdown, { zeroPad } from 'react-countdown';
-import Button from "../Button/Button"
+import Buttons from "../Buttons/Buttons"
 
 import './Clock.css';
 
@@ -14,12 +14,14 @@ const Clock = props => {
 
   const handlePause = () => {
     clockRef.current.pause();
+    const currentTime = clockRef.current.calcTimeDelta()
+    props.pauseTimer(currentTime.total);
   };
 
   return (
     <div className="clock">
-      <Countdown date={Date.now() + (1000 * 60 * props.time)} autoStart={false} controlled={false} renderer={(props) => <div>{props.minutes}:{zeroPad(props.seconds)}</div>} ref={clockRef} />
-      <Button timerOn={props.timerOn} handlePause={handlePause} handleStart={handleStart} />
+      <Countdown date={Date.now() + (props.time)} autoStart={false} controlled={false} renderer={(props) => <div>{props.minutes}:{zeroPad(props.seconds)}</div>} ref={clockRef} />
+      <Buttons timerOn={props.timerOn} handlePause={handlePause} handleStart={handleStart} />
     </div>
   );
 }
