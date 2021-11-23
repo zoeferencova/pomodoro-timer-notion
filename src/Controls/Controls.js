@@ -1,9 +1,9 @@
-import './Buttons.css';
+import './Controls.css';
 
-const Buttons = props => {
+const Controls = props => {
   return (
     <div>
-      <button type="submit" className="restart-button" onClick={props.timerOn ? props.handlePause : props.handleRestart}>
+      <button type="submit" className="restart-button" onClick={props.handleRestart}>
         Restart
       </button>
       <button type="submit" className="start-pause-button" onClick={props.timerOn ? props.handlePause : props.handleStart}>
@@ -14,4 +14,4 @@ const Buttons = props => {
   );
 }
 
-export default Buttons;
+export default Controls;
