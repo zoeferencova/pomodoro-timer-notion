@@ -16,7 +16,7 @@ class Widget extends Component {
     this.state = {
       currentTab: {
         tabName: "pomodoro",
-        time: 2000
+        time: 1500000
       },
       timerOn: false,
       pomodoros: 0,
