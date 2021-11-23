@@ -16,7 +16,7 @@ class Widget extends Component {
     this.state = {
       currentTab: tabData[0],
       timerOn: false,
-      pomodoros: 0,
+      pomodoros: 1,
     }
   }
 
@@ -26,9 +26,10 @@ class Widget extends Component {
   }
 
   handleCompletion = () => {
-    this.setState({ timerOn: false })
+    this.state.currentTab.tabName === "Pomodoro" && this.setState({ pomodoros: this.state.pomodoros + 1 })
+    this.setState({ timerOn: false });
     alarm.play();
-    this.changeTab(this.state.currentTab.next)
+    this.state.pomodoros % 4 === 0 && this.state.currentTab.altNext ? this.changeTab(this.state.currentTab.altNext) : this.changeTab(this.state.currentTab.next);
   }
 
   handleStart = () => {
@@ -39,13 +40,13 @@ class Widget extends Component {
   handlePause = () => {
     this.clockRef.current.pause();
     const pausedTime = this.clockRef.current.calcTimeDelta().total;
-    this.setState({ timerOn: false, currentTab: { time: pausedTime } });
+    this.setState({ timerOn: false, currentTab: { ...this.state.currentTab, time: pausedTime } });
   };
 
   handleRestart = () => {
+    const currentTab = tabData.find(tab => tab.tabName === this.state.currentTab.tabName)
+    this.setState({ timerOn: false, currentTab: { ...this.state.currentTab, time: currentTab.time } });
     this.clockRef.current.stop();
-    this.setState({ timerOn: false });
-    this.clockRef.current.start();
   }
 
   render() {
