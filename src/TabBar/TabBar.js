@@ -1,3 +1,4 @@
+import tabData from '../tab-settings';
 import Tab from '../Tab/Tab';
 
 import './TabBar.css';
@@ -5,9 +6,7 @@ import './TabBar.css';
 const TabBar = props => {
   return (
     <div className="tab-bar">
-      <Tab tabName="Pomodoro" time={1500000} changeTab={props.changeTab} />
-      <Tab tabName="Short Break" time={300000} changeTab={props.changeTab} />
-      <Tab tabName="Long Break" time={900000} changeTab={props.changeTab} />
+      {tabData.map((tab, i) => <Tab key={i} index={i} tabName={tab.tabName} time={tab.time} changeTab={props.changeTab}></Tab>)}
     </div>
   );
 }

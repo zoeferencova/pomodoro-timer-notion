@@ -1,7 +1,7 @@
 import { Component, createRef } from 'react';
 import Countdown, { zeroPad } from 'react-countdown';
 import alarmSound from '../sounds/pomodoro-alarm.mp3';
-
+import tabData from '../tab-settings';
 import TabBar from '../TabBar/TabBar';
 import Controls from '../Controls/Controls';
 
@@ -14,23 +14,21 @@ class Widget extends Component {
     super(props);
     this.clockRef = createRef();
     this.state = {
-      currentTab: {
-        tabName: "pomodoro",
-        time: 1500000
-      },
+      currentTab: tabData[0],
       timerOn: false,
       pomodoros: 0,
     }
   }
 
-  changeTab = (tabName, time) => {
+  changeTab = index => {
     this.clockRef.current.stop();
-    this.setState({ timerOn: false, currentTab: {tabName, time} });
+    this.setState({ timerOn: false, currentTab: tabData[index] });
   }
 
   handleCompletion = () => {
     this.setState({ timerOn: false })
     alarm.play();
+    this.changeTab(this.state.currentTab.next)
   }
 
   handleStart = () => {
