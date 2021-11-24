@@ -5,8 +5,12 @@
     text-align: center;
     padding: 30px;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .clock-numbers {
-    font-size: 100px;
+    font-size: 120px;
+    margin: 20px 0px;
 }

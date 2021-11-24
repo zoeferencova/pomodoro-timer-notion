@@ -1,3 +1,26 @@
 .tab:not(:last-child) {
     margin-right: 20px;
 }
+
+.tab {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+}
+
+.tab0 {
+    color:#1d3829;
+    background-color: #dbeddb;
+}
+
+.tab1 {
+    color:#402c1b;
+    background-color: #fcecc8;
+}
+
+.tab2 {
+    color: #1a3449;
+    background-color: #d3e4ef;
+}
