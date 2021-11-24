@@ -54,10 +54,11 @@ class Widget extends Component {
       <div className="widget">
         <TabBar currentTab={this.state.currentTab.tabName} changeTab={this.changeTab} />
         <Countdown 
+          className="clock"
           date={Date.now() + (this.state.currentTab.time)} 
           autoStart={false} 
           controlled={false} 
-          renderer={(props) => <div>{props.minutes}:{zeroPad(props.seconds)}</div>} 
+          renderer={(props) => <span className="clock-numbers">{props.minutes}:{zeroPad(props.seconds)}</span>} 
           ref={this.clockRef}
           onComplete={this.handleCompletion}>
         </Countdown>

@@ -1,6 +1,12 @@
 .widget {
-    display:flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-evenly
+    max-width: 500px;
+    border: 1px solid gray;
+    margin: 50px auto 0px auto;
+    text-align: center;
+    padding: 30px;
+    height: 300px;
+}
+
+.clock-numbers {
+    font-size: 100px;
 }
