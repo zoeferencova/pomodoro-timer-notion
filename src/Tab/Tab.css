@@ -3,24 +3,29 @@
 }
 
 .tab {
-    padding: 6px 12px;
+    padding: 5px 8px;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 0.1px;
     cursor: pointer;
 }
 
-.tab0 {
+.tab0, .tab1, .tab2 {
+    background-color: #f1f0f0;
+    color: #777573;
+}
+
+.tab0.active {
     color:#1d3829;
     background-color: #dbeddb;
 }
 
-.tab1 {
+.tab1.active {
     color:#402c1b;
     background-color: #fcecc8;
 }
 
-.tab2 {
+.tab2.active {
     color: #1a3449;
     background-color: #d3e4ef;
 }
