@@ -26,7 +26,7 @@ class Widget extends Component {
   }
 
   handleCompletion = () => {
-    this.state.currentTab.tabName === "Pomodoro" && this.setState({ pomodoros: this.state.pomodoros + 1 })
+    this.state.currentTab.tabName !== "Pomodoro" && this.setState({ pomodoros: this.state.pomodoros + 1 })
     this.setState({ timerOn: false });
     alarm.play();
     this.state.pomodoros % 4 === 0 && this.state.currentTab.altNext ? this.changeTab(this.state.currentTab.altNext) : this.changeTab(this.state.currentTab.next);
