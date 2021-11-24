@@ -61,7 +61,7 @@ class Widget extends Component {
           ref={this.clockRef}
           onComplete={this.handleCompletion}>
         </Countdown>
-        <Controls timerOn={this.state.timerOn} handlePause={this.handlePause} handleStart={this.handleStart} handleRestart={this.handleRestart} />
+        <Controls timerOn={this.state.timerOn} handlePause={this.handlePause} handleStart={this.handleStart} handleRestart={this.handleRestart} pomodoros={this.state.pomodoros} />
       </div>
     );
   }

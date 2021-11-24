@@ -9,6 +9,7 @@ const Controls = props => {
       <button type="submit" className="start-pause-button" onClick={props.timerOn ? props.handlePause : props.handleStart}>
         {props.timerOn ? "Pause" : "Start"}
       </button>
+      <span>{props.pomodoros}</span>
     </div>
     
   );
