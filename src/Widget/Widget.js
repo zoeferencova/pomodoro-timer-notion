@@ -17,6 +17,7 @@ class Widget extends Component {
       currentTab: tabData[0],
       timerOn: false,
       pomodoros: 1,
+      currentDate: new Date().getDate()
     }
   }
 
@@ -27,12 +28,14 @@ class Widget extends Component {
 
   handleCompletion = () => {
     this.state.currentTab.tabName !== "Pomodoro" && this.setState({ pomodoros: this.state.pomodoros + 1 })
-    this.setState({ timerOn: false });
     alarm.play();
     this.state.pomodoros % 4 === 0 && this.state.currentTab.altNext ? this.changeTab(this.state.currentTab.altNext) : this.changeTab(this.state.currentTab.next);
+
   }
 
   handleStart = () => {
+    // reset pomodoros if it is a new day
+    new Date().getDate() !== this.state.currentDate && this.setState({ pomodoros: 1 });
     this.clockRef.current.start();
     this.setState({ timerOn: true });
   };
